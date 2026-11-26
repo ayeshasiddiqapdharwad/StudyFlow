@@ -1,0 +1,17 @@
+{
+  "name": "studyflow",
+  "version": "1.0.0",
+  "description": "StudyFlow - Student-friendly study management system for schedules, tasks, academic progress, notes, and productivity.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "@google/genai": "^3.6.1"
+  }
+}
