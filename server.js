@@ -98,7 +98,11 @@ export function createStudyFlowServer(overrides = {}) {
 const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
 if (isMain) {
   const { server, config } = createStudyFlowServer();
-  server.listen(config.port, config.host, () => {
-    console.log(`StudyFlow running at http://${config.host}:${config.port}`);
-  });
+
+const port = Number(process.env.PORT || config.port);
+const host = '0.0.0.0';
+
+server.listen(port, host, () => {
+  console.log(`StudyFlow running at http://${host}:${port}`);
+});
 }
